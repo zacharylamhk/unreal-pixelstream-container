@@ -76,3 +76,10 @@ EOF
 # Switch to non-root user and set working directory
 USER ubuntu
 WORKDIR /home/ubuntu
+
+# Create entrypoint script in user's home directory
+RUN echo '#!/bin/bash\n\necho "Please check the usage from https://github.com/zacharylamhk/unreal-pixelstream-container.git"\n\n# If arguments are passed, execute them\nif [ "$#" -gt 0 ]; then\n    exec "$@"\nfi' > /home/ubuntu/entrypoint.sh && \
+    chmod +x /home/ubuntu/entrypoint.sh
+
+ENTRYPOINT ["/home/ubuntu/entrypoint.sh"]
+CMD ["bash"]
