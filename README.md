@@ -18,11 +18,17 @@ This Docker container provides a ready-to-use environment for running Unreal Eng
 - NVIDIA drivers installed on host machine
 - X server running on host (for display forwarding)
 
-## Building the Image
+## Building the Image or get the image from docker hub
 
 ```bash
 docker build -t unreal-pixel-streaming .
 ```
+or
+
+```bash
+docker pull zacharylam/unreal-pixelstream-container
+```
+
 
 
 
