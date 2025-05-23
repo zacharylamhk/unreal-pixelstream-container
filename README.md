@@ -44,15 +44,17 @@ docker run --rm -it \
   -PixelStreamingID=<Game_ID>
 ```
 
-Parameters Explanation
-Parameter	Description
---gpus all	Enable all available GPUs
---network=host	Use host network for better performance
--e DISPLAY=$DISPLAY	Forward X11 display
--v /tmp/.X11-unix:/tmp/.X11-unix	X11 socket mount
--v $HOME/.Xauthority:/home/ubuntu/.Xauthority	X11 authentication
--v <path>:/app	Mount your game directory
--PixelStreamingIP	IP address for Pixel Streaming
--PixelStreamingPort	Port for Pixel Streaming
--renderoffscreen	Enable offscreen rendering
--PixelStreamingID	Unique identifier for your game session
+## Parameters Explanation
+
+| Parameter | Description |
+|-----------|-------------|
+| `--gpus all` | Enable all available GPUs |
+| `--network=host` | Use host network for better performance |
+| `-e DISPLAY=$DISPLAY` | Forward X11 display |
+| `-v /tmp/.X11-unix:/tmp/.X11-unix` | X11 socket mount |
+| `-v $HOME/.Xauthority:/home/ubuntu/.Xauthority` | X11 authentication |
+| `-v <path>:/app` | Mount your game directory |
+| `-PixelStreamingIP=<IP>` | IP address for Pixel Streaming |
+| `-PixelStreamingPort=<PORT>` | Port for Pixel Streaming (default: 8888) |
+| `-renderoffscreen` | Enable offscreen rendering |
+| `-PixelStreamingID=<ID>` | Unique identifier for your game session |
